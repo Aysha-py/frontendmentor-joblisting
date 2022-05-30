@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import photosnap from '../assets/img/photosnap.svg'
 
 const JobField = () => {
+
+    const [newjob,setNewJob] = useState(true)
+    const [featured,setFeatured] = useState(true)
+    const languages= ['Frontend','Senior','HTML','CSS','Javascript']
+
   return (
     <div id='jobfield-container'>
         <div className='jobfield-header'>
@@ -12,10 +17,10 @@ const JobField = () => {
                 <div className='jobfield-details-title'>
                     <p>photosnap</p>
                     <div className='jobfield-details-title-subtitle'>
-                        <p>New</p>
+                        {newjob ? <p>New Job</p> : null}
                     </div>
                     <div className='jobfield-details-title-subtitle'>
-                        <p>Featured</p>
+                    {featured ? <p>Featured</p> : null}
                     </div>
                 </div>
                 <div className='jobfield-details-description'>
@@ -33,16 +38,18 @@ const JobField = () => {
             </div>
         
         </div>
-        <div className='jobfield-side'>
-            <ul>
-                <li> Frontend </li>
-                <li> Senior </li>
-                <li> HTML </li>
-                <li> CSS </li>
-                <li> Javascript </li>
-            </ul>
         
-        </div>
+        {
+            languages.map((language,index) => {
+                return <ul className='jobfield-side' key={index}>
+                        <li className='jobfield-side-list'> {language} </li>
+                    </ul>
+                
+            })
+                    
+        }
+           
+        
     
     </div>
   )
