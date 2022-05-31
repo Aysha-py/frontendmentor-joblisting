@@ -1,55 +1,68 @@
 import React,{useState} from 'react'
-import photosnap from '../assets/img/photosnap.svg'
 
-const JobField = () => {
+const JobField = ({information}) => {
 
+    
     const [newjob,setNewJob] = useState(true)
-    const [featured,setFeatured] = useState(true)
-    const languages= ['Frontend','Senior','HTML','CSS','Javascript']
+    const [featured,setFeatured] = useState(true) 
+    
 
+ 
   return (
-    <div id='jobfield-container'>
-        <div className='jobfield-header'>
-            <div className='jobfield-image'>
-                <img src={photosnap} alt="photosnap company"/>
-            </div>
-            <div className='jobfield-details'>
-                <div className='jobfield-details-title'>
-                    <p>photosnap</p>
-                    <div className='jobfield-details-title-subtitle'>
-                        {newjob ? <p>New Job</p> : null}
-                    </div>
-                    <div className='jobfield-details-title-subtitle'>
-                    {featured ? <p>Featured</p> : null}
-                    </div>
-                </div>
-                <div className='jobfield-details-description'>
-                    <p>Senior Frontend Developer</p>
-                </div>
-                <div className='jobfield-details-location'> 
-                    <p>1d ago .</p>
-                    <div className='jobfield-details-location-subtitle'>
-                        <p>Fulltime .</p>
-                    </div>
-                    <div className='jobfield-details-location-subtitle'>
-                        <p>USA only.</p>
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-        
+    <div className="job-field">
+    
         {
-            languages.map((language,index) => {
-                return <ul className='jobfield-side' key={index}>
-                        <li className='jobfield-side-list'> {language} </li>
-                    </ul>
+            information?.map((value,index) => (
+                <div id='jobfield-container' key={index}> 
+                    <div className='jobfield-box'>
+                        <div className='jobfield-content'>
+                            
+                            <img src={value.logo}    alt="company-logo"/>
+                            
+                            <div className='jobfield-details'>
+                                <div className='jobfield-details-title'>
+                                    <p>{value?.company}</p>
+                                </div>
+                                <div className='jobfield-details-title-subtitle'>
+                                    {newjob ? <p>New </p> : null}
+                                </div>
+                                <div className='jobfield-details-title-subtitle'>
+                                    {featured ? <p>Featured</p> : null}
+                                </div>
+                            </div>
+                        </div>   
+
+                        <div className='jobfield-details-position'>
+                            <p>{value?.position}</p>
+                        </div>
+
+                        <div className='jobfield-details-location'> 
+                            <p>{value?.postedAt}.</p>
+                            <div className='jobfield-details-location-subtitle'>
+                                <p>{value?.contract} .</p>
+                            </div>
+                            <div className='jobfield-details-location-subtitle'>
+                                <p>{value?.location}.</p>
+                            </div>
+                        </div>
+                    </div> 
+
+              
+                    <div className='jobfield-side'>
+                        <ul>
+                            {value.languages.map((item,i) => 
+                                <li key={i}>{item}</li>
+                            )}
+                        </ul>
+                    </div>
+                   
+                </div>
+
+
                 
-            })
-                    
+            ))
         }
-           
-        
+             
     
     </div>
   )

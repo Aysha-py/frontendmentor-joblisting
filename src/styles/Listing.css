@@ -78,6 +78,3 @@ input:focus{
 .listing-search-button button:hover{
     border-bottom: 1px solid;
 }
-.listing-content{
-    height: 500px;
-}
