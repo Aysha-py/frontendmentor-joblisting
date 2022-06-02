@@ -24,7 +24,7 @@ html{
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: white;
     width: 90%;
     position: relative;
@@ -34,11 +34,9 @@ html{
 }
 .listing-search-input{
     display: flex;
-    background-color: black;
-    width: 20%;
-    border: 1px solid;
-    border-radius: 10px;
-    border: none;
+    width: 25%;
+    border-radius:10px;
+   
 }
 
 .listing-search-input input{
@@ -47,15 +45,22 @@ html{
     background-color:rgb(232, 245, 255); 
     border:1px solid;
     border: none;
+    border-radius: 5px;
     font-size: 1.2em;
+    width: 250px;
+}
+.listing-search-input input:focus{
+    outline: none;
 }
 .listing-search-input button{
     background-color:rgb(110, 167, 214); 
     color: white;
-    border: none;
     padding: .5em;
     font-size: 1.2em;
     cursor: pointer;
+    border: none;
+    display: flex;
+    
 }
 .listing-search-input button:hover{
     background-color:rgb(37, 36, 36); 
@@ -77,4 +82,21 @@ input:focus{
 }
 .listing-search-button button:hover{
     border-bottom: 1px solid;
+}
+@media only screen and (max-width: 420px){
+    #listing-container{
+       
+            width:100%
+          
+        }
+        .listing-search-container{
+            width: 90%; 
+            padding: 0.8em;   
+        }
+        .listing-search-input input{
+            font-size: 1em;
+            width: 120px;
+        }
+    
+
 }

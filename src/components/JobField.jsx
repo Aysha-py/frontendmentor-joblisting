@@ -5,8 +5,7 @@ const JobField = ({information}) => {
     
     const [newjob,setNewJob] = useState(true)
     const [featured,setFeatured] = useState(true) 
-    
-
+ 
  
   return (
     <div className="job-field">

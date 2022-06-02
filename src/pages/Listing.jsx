@@ -7,15 +7,19 @@ import listingData from '../data.json'
 const Listing = () => {
   const [information,setInformation] = useState([])
   const [search,SetSearch] = useState('')
+  const[show,setShow] = useState(true)
 
  
 
   useEffect(() => {
     const result = listingData.filter((info) =>
-      info.location.includes(search)
+      info.role.toLowerCase().includes(search)
     );
     setInformation(result);
   }, [search]);
+
+
+
 
   return (
     <div id ='listing-container'>
@@ -25,15 +29,19 @@ const Listing = () => {
 
       <div className="listing-search">
           <div className="listing-search-container">
+         
             <div className='listing-search-input'>
                 <input type="text" 
                 placeholder='Search' 
                 value={search} 
                 onChange={(e) => SetSearch(e.target.value)}/>
-                <button>X</button>
-            </div>
+                <button onClick={() => SetSearch("")}>X</button>
+                
+              </div>
+          
+        
             <div className='listing-search-button'>
-              <button>clear</button>
+                <button>clear</button>
             </div>
           </div>         
       </div>
