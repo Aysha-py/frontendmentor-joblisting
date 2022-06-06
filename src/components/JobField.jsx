@@ -1,11 +1,8 @@
-import React,{useState} from 'react'
+import React from 'react'
 
 
 const JobField = ({information,listingData}) => {
 
-    
-    const [newjob,setNewJob] = useState(true)
-    const [featured,setFeatured] = useState(true) 
  
  console.log(listingData)
   return (
@@ -24,8 +21,8 @@ const JobField = ({information,listingData}) => {
                                     <p>{value?.company}</p>
                                 </div>
                                 <div className='jobfield-details-title-subtitle'>
-                                { index === 0 || index === 1 ?
-                                     <p className='p1'>New </p> : null
+                                { index === 0 || index === 1 || index === 2 ?
+                                     <p className='p1'>New !   </p> : null
                                 }
                                 </div>
                                 <div className='jobfield-details-title-subtitle'>
@@ -55,7 +52,14 @@ const JobField = ({information,listingData}) => {
               
                     <div className='jobfield-side'>
                         <ul>
+                            <li>{value.role}</li>
+                            <li>{value.level}</li>
                             {value.languages.map((item,i) => 
+                               
+                                <li key={i}>{item}</li>
+                            )}
+                            {value.tools.map((item,i) => 
+                               
                                 <li key={i}>{item}</li>
                             )}
                         </ul>
