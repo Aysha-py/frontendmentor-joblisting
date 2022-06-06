@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 
-const JobField = ({information}) => {
+
+const JobField = ({information,listingData}) => {
 
     
     const [newjob,setNewJob] = useState(true)
     const [featured,setFeatured] = useState(true) 
  
- 
+ console.log(listingData)
   return (
     <div className="job-field">
     
@@ -15,18 +16,23 @@ const JobField = ({information}) => {
                 <div id='jobfield-container' key={index}> 
                     <div className='jobfield-box'>
                         <div className='jobfield-content'>
-                            
-                            <img src={value.logo}    alt="company-logo"/>
-                            
+                           <div className='jobfield-image'>
+                                <img src={value?.logo}    alt="logo"/>
+                            </div> 
                             <div className='jobfield-details'>
                                 <div className='jobfield-details-title'>
                                     <p>{value?.company}</p>
                                 </div>
                                 <div className='jobfield-details-title-subtitle'>
-                                    {newjob ? <p>New </p> : null}
+                                { index === 0 || index === 1 ?
+                                     <p className='p1'>New </p> : null
+                                }
                                 </div>
                                 <div className='jobfield-details-title-subtitle'>
-                                    {featured ? <p>Featured</p> : null}
+                                { index === 0 || index === 1 ?
+                                    <p className='p2'>Featured</p> : null
+                                 
+                                 }
                                 </div>
                             </div>
                         </div>   
@@ -57,7 +63,7 @@ const JobField = ({information}) => {
                    
                 </div>
 
-
+                
                 
             ))
         }

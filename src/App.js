@@ -1,6 +1,6 @@
-import React,{useEffect,useState} from 'react';
 import './App.css';
 import Listing from './pages/Listing';
+
 
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Listing />
+    
     </div>
   );
 }

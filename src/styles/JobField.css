@@ -22,6 +22,7 @@
     font-weight: 700;
     margin-left: 1rem;
     display: flex;
+    text-align: center;
     
 }
 .jobfield-details-position{
@@ -36,7 +37,6 @@
     margin-top:1rem;
     color: grey;
 }
-
 
 .jobfield-side ul{
     display: flex;
@@ -53,6 +53,24 @@
     margin-right: 1.5rem;
    
 }
+.jobfield-details-title-subtitle .p1{
+    padding: 0.2em 1em;
+    background-color: rgb(110, 167, 214);
+    color: white;
+    border-radius: 20px;
+
+}
+.jobfield-details-title-subtitle .p2{
+    background-color: black;
+    padding: 0.2em 1em;
+    color: white;
+    border-radius: 20px;
+
+}
+.jobfield-details-title{
+    text-align: center;
+    font-size: 1.2rem;
+}
 .jobfield-side li:hover{
     background-color:rgb(37, 36, 36); 
     color: white;
@@ -64,6 +82,12 @@
 
 
     }
+    
+
+.jobfield-details{
+    margin-left: 0;
+    margin-top: 1rem;
+}
     .jobfield-content{
         display: flex;
         flex-direction: column;
@@ -79,7 +103,7 @@
     }
     .jobfield-side li{
         margin-top:.5rem;
-      
+        
     }
     
 }
