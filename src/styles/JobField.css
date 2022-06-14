@@ -75,6 +75,9 @@
     background-color:rgb(37, 36, 36); 
     color: white;
 } 
+.jobfield-other-info{
+    margin-left: 20px;
+}
 @media only screen and (max-width: 420px){
     #jobfield-container{
         display: flex;
@@ -104,6 +107,9 @@
     .jobfield-side li{
         margin-top:.5rem;
         
+    }           
+    .jobfield-side{
+        flex-wrap: wrap;
     }
     
 }
