@@ -1,18 +1,19 @@
 import React,{useState,useEffect} from 'react';
 import bgheaderdesktop from "../images/bg-header-desktop.svg"
 import JobField from '../components/JobField';
-import listingData from '../data.json'
+import {listingData} from '../data'
 
 
 const Listing = () => {
   const [information,setInformation] = useState([])
   const [search,SetSearch] = useState('')
 
+ console.log(listingData)
 
- 
+
   useEffect(() => {
     const result = listingData.filter((info) =>
-      info.role.toLowerCase().includes(search)
+      info.location.toLowerCase().includes(search)
     );
     setInformation(result);
   }, [search]);
@@ -31,7 +32,7 @@ const Listing = () => {
          
             <div className='listing-search-input'>
                 <input type="text" 
-                placeholder='Search by Role' 
+                placeholder='Search' 
                 value={search} 
                 onChange={(e) => SetSearch(e.target.value)}/>
                 <button onClick={() => SetSearch("")}>X</button>

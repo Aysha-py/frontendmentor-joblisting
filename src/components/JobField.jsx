@@ -4,7 +4,7 @@ import React from 'react'
 const JobField = ({information,listingData}) => {
 
  
- console.log(listingData)
+
   return (
     <div className="job-field">
     
