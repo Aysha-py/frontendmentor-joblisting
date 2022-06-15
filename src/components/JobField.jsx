@@ -19,7 +19,7 @@ const JobField = ({information,listingData}) => {
                             <div className="hhh">
                                 <div className='jobfield-details'>
                                     <div className='jobfield-details-title'>
-                                        <p>{value?.company}</p>
+                                        <p id="company">{value?.company}</p>
                                     </div>
                                     <div className='jobfield-details-title-subtitle'>
                                         { index === 0 || index === 1 || index === 2 ?
@@ -36,16 +36,16 @@ const JobField = ({information,listingData}) => {
                                     
                                 <div className='jobfield-other-info'>
                                     <div className='jobfield-details-position'>
-                                        <p>{value?.position}</p>
+                                        <p id='position'>{value?.position}</p>
 
                                     </div>
                                     <div className='jobfield-details-location'> 
-                                        <p>{value?.postedAt}.</p>
+                                        <p>{value?.postedAt} . </p>
                                         <div className='jobfield-details-location-subtitle'>
-                                            <p>{value?.contract} .</p>
+                                            <p> { value?.contract} . </p>
                                         </div>
                                         <div className='jobfield-details-location-subtitle'>
-                                            <p>{value?.location}.</p>
+                                            <p> {value?.location}. </p>
                                         </div>
                                     </div>
                                    
