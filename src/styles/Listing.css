@@ -85,14 +85,16 @@ input:focus{
 }
 @media only screen and (max-width: 420px){
     #listing-container{
+        width:100%;     
+        }
        
-            width:100%
-          
-        }
+       
+       
         .listing-search-container{
-            width: 90%; 
-            padding: 0.8em;   
-        }
+            display: none;
+
+        };
+        
         .listing-search-input input{
             font-size: 1em;
             width: 120px;

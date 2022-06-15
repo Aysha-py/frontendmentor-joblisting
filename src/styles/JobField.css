@@ -1,13 +1,13 @@
 
 #jobfield-container{
+      
     padding: 1em;
     background-color: #fff;
     width: 90%;
-    margin: auto;
+ margin: auto;
     cursor: pointer;
     display: flex;
     margin-bottom: 2rem;
-   
     justify-content: space-between;
 }
 #jobfield-container:hover{
@@ -17,6 +17,7 @@
 }
 .jobfield-content{
     display: flex;
+  
 }
 .jobfield-details{
     font-weight: 700;
@@ -82,15 +83,13 @@
     #jobfield-container{
         display: flex;
         flex-direction: column;
-
-
     }
     
 
-.jobfield-details{
-    margin-left: 0;
-    margin-top: 1rem;
-}
+    .jobfield-details{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
     .jobfield-content{
         display: flex;
         flex-direction: column;
@@ -105,11 +104,16 @@
         padding-bottom:15px;
     }
     .jobfield-side li{
-        margin-top:.5rem;
-        
+        margin:0;
     }           
-    .jobfield-side{
-        flex-wrap: wrap;
+    .jobfield-other-info{
+        margin-left: 0;
     }
-    
+    .jobfield-side ul{
+        flex-wrap: wrap;
+      
+    }
+    .job-field{
+        margin-top: 2rem;
+    }
 }
