@@ -41,10 +41,8 @@
 
 .jobfield-side ul{
     display: flex;
- 
 }
-#position{
-   
+#position{ 
     font-weight:bolder;
 }
 #company{
@@ -112,14 +110,16 @@
         padding-bottom:15px;
     }
     .jobfield-side li{
-        margin:0;
-    }           
+        margin-left: 0px;
+        font-size: 16px;
+    }
+
+    
     .jobfield-other-info{
         margin-left: 0;
     }
     .jobfield-side ul{
-        flex-wrap: wrap;
-      
+        flex-wrap: wrap;   
     }
     .job-field{
         margin-top: 2rem;

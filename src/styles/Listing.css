@@ -7,7 +7,7 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
-#listing-container{
+#container{
     width: 80%;
     margin: auto;
     font-family: 'Roboto', sans-serif;
@@ -16,7 +16,7 @@ html{
 .header{
     background-color:rgb(181, 217, 247);
 }
-.listing-header img{
+.header img{
     width: 100%;
     height: auto;
 }
