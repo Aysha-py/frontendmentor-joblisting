@@ -1,5 +1,5 @@
 
-#jobfield-container{
+#container{
       
     padding: 1em;
     background-color: #fff;
@@ -49,6 +49,7 @@
 }
 #company{
     color:rgb(110, 167, 214) ;
+    font-size: 16px;
 }
 .jobfield-side li{
     margin-top: 1.5rem;
@@ -87,7 +88,7 @@
     margin-left: 20px;
 }
 @media only screen and (max-width: 920px){
-    #jobfield-container{
+    #container{
         display: flex;
         flex-direction: column;
     }

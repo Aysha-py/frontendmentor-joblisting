@@ -23,7 +23,7 @@ const Listing = () => {
 
   return (
     <div id ='listing-container'>
-      <div className='listing-header'>
+      <div className='header'>
         <img src={bgheaderdesktop} alt='headerimage'/>
       </div>
 

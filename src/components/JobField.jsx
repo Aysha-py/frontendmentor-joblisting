@@ -10,7 +10,7 @@ const JobField = ({information,listingData}) => {
     
         {
             information?.map((value,index) => (
-                <div id='jobfield-container' key={index}> 
+                <div id='container' key={index}> 
                     <div className='jobfield-box'>
                         <div className='jobfield-content'>
                            <div className='jobfield-image'>
@@ -19,7 +19,7 @@ const JobField = ({information,listingData}) => {
                             <div className="hhh">
                                 <div className='jobfield-details'>
                                     <div className='jobfield-details-title'>
-                                        <p id="company">{value?.company}</p>
+                                        <h1 id="company">{value?.company}</h1>
                                     </div>
                                     <div className='jobfield-details-title-subtitle'>
                                         { index === 0 || index === 1 || index === 2 ?
