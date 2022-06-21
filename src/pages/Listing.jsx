@@ -13,7 +13,7 @@ const Listing = () => {
 
   useEffect(() => {
     const result = listingData.filter((info) =>
-      info.location.toLowerCase().includes(search)
+      info.role.toLowerCase().includes(search)
     );
     setInformation(result);
   }, [search]);
@@ -32,7 +32,7 @@ const Listing = () => {
          
             <div className='listing-search-input'>
                 <input type="text" 
-                placeholder='Search' 
+                placeholder='Search By role' 
                 value={search} 
                 onChange={(e) => SetSearch(e.target.value)}/>
                 <button onClick={() => SetSearch("")}>X</button>
